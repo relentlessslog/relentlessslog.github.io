@@ -1,0 +1,7 @@
+{% module "footer", "site" %}
+
+    {% for data in footer %}
+            {% button data.link, data.text, "tertiary-btn", true %}
+    {% endfor %}
+
+{% endmodule %}
