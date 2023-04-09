@@ -1,8 +1,0 @@
-{% module "section", "hero" %}
-    <div class="text-content">    
-        <h1>{{ hero.heading }}</h1>
-        <h4>{{ hero.body }}</h4>
-        {% button hero.button.link, hero.button.text, "primary-btn", true %}
-    </div>
-    {% include "components/hero-image.njk/" %}
-{% endmodule %}
