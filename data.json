@@ -1,0 +1,15 @@
+{
+    "basicInfo": {
+        "companyName": "Relentless Slog",
+        "email": "relentlessslog@gmail.com",
+        "city": "Seattle, WA"
+    },
+    "sections": [
+        {
+            "id": "landing",
+            "title": "Bespoke Web Solutions for small businesses",
+            "intro": "Increase your sales with a meticulously hand-crafted website built by a nerd "
+        }
+    ]
+}
+        

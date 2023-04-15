@@ -172,6 +172,18 @@ html {
     --yellow: #fbf49c;
     --inter: "Inter", sans-serif;
     --transition: 0.2s ease-in;
+
+    /* APPLE STYLES */
+
+    --apple-dark-background: #3C3635;
+    --apple-dark-border: #605A59;
+    --apple-dark-icon: #BCB6B5;
+    --apple-dark-icon-2: #E2E1E1;
+    --apple-dark-text: #FFFFFF;
+    --apple-red: #FF5F57;
+    --apple-yellow: #FEBB2E;
+    --apple-green: #29C840;
+
 }
 
 body {
@@ -362,4 +374,66 @@ strike::before {
 
 mark {
     background-color: var(--yellow);
+}
+
+
+/* APPLE */
+
+.apple {
+    background-color: var(--apple-dark-background);
+}
+
+.apple :is(.title, .subtitle, .body, .wordmark, .text-link) {
+    color: var(--apple-dark-text);
+    font-weight: 400;
+}
+
+.apple :is(.title, .subtitle) {
+    font-weight: 400;
+    max-width: 20ch;
+}
+
+.apple .subtitle {
+    color: var(--apple-dark-icon-2);
+}
+
+.apple .body {
+    font-size: 1rem;
+}
+
+.apple .inner-column {
+    border: 0.5px solid var(--apple-dark-border);
+    border-radius: 0.875rem;
+}
+
+.apple .wordmark span:nth-of-type(1) {
+    color: var(--apple-red);
+}
+
+.apple .wordmark span:nth-of-type(2) {
+    color: var(--apple-yellow);
+}
+
+.apple .wordmark span:nth-of-type(3) {
+    color: var(--apple-green);
+}
+
+.apple .wordmark span:nth-of-type(4) {
+    color: var(--apple-green);
+}
+
+.apple .text-link {
+    color: var(--apple-dark-icon);
+}
+
+.apple :is(.primary-btn, .secondary-btn) {
+    background-color: var(--apple-dark-icon-2);
+    color: var(--apple-dark-background);
+    border: 0.5px solid var(--apple-dark-icon-2);
+    border-radius: 0.50rem;
+}
+
+.apple .secondary-btn {
+    background-color: var(--apple-dark-background);
+    color: var(--apple-dark-icon-2);
 }
