@@ -1,0 +1,32 @@
+.btn-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: var(--spacing);    
+}
+
+.primary-btn,
+.secondary-btn {
+    font-size: 1rem;
+    padding: 13px 20px;
+    text-transform: capitalize;
+    border: 1.5px solid var(--ink);
+}
+
+.primary-btn {
+    background-color: var(--ink);
+    color: var(--paper);
+}
+
+.secondary-btn {
+    background-color: var(--paper);
+    color: var(--ink);
+}
+
+.text-link {
+    color: var(--ink);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: underline;
+}

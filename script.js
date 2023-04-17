@@ -1,6 +1,6 @@
-fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data.hello);
-    })
-    .catch((error) => console.error(error));
+const subTitle = document.querySelectorAll(".subtitle");
+const hr = document.querySelectorAll("hr");
+
+subTitle.forEach( (e, i) => {
+   hr[i].style.width = e.clientWidth + "px";
+})

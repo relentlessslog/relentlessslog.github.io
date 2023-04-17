@@ -1,4 +1,20 @@
-/* $Typography */
+@font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/inter-v12-latin-regular.woff2") format("woff2"),
+        url("../fonts/inter-v12-latin-regular.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/inter-v12-latin-700.woff2") format("woff2"),
+        url("../fonts/inter-v12-latin-700.woff") format("woff");
+}
 
 .title,
 .subtitle,
@@ -6,14 +22,17 @@
 .wordmark,
 .primary-btn,
 .secondary-btn,
-.text-link {
+.text-link,
+.item-title,
+.item-body {
     font-family: var(--inter);
     letter-spacing: 0.02em;
     color: var(--ink);
 }
 
 .title,
-.subtitle {
+.subtitle,
+.item-title {
     font-weight: 700;
 }
 
@@ -24,10 +43,11 @@
     text-transform: capitalize;
 }
 
-.subtitle {
+.subtitle,
+.item-title {
     font-size: 0.875rem;
     line-height: 1.2;
-    opacity: 0.5;
+    color: var(--gray);
     text-transform: uppercase;
 }
 
@@ -48,37 +68,20 @@
     text-transform: capitalize;
 }
 
-.primary-btn,
-.secondary-btn {
-    font-size: 1rem;
-    padding: 13px 20px;
-    text-transform: capitalize;
-    border: 1.5px solid var(--ink);
-}
-
-.primary-btn {
-    background-color: var(--ink);
-    color: var(--paper);
-}
-
-.secondary-btn {
-    background-color: var(--paper);
+.item-title {
     color: var(--ink);
 }
 
-.text-link {
-    color: var(--ink);
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 1.25rem;
-    text-decoration: underline;
+.item-body {
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
 
 strike {
-    display: inline-block;
-    transform: rotate(-10deg);
-    color: var(--gray);
+    /* transform: rotate(-10deg); */
+    color: var(--ink);
     text-decoration: none;
+    position: relative;
 }
 
 strike::before {
@@ -88,25 +91,9 @@ strike::before {
     width: 100%;
     height: 100%;
     top: -45%;
-    left: -5%;
-    transform: rotate(-10deg);
-}
-
-strike::after {
-    position: absolute;
-    content: "";
-    border-bottom: 2px solid var(--red);
-    width: 100%;
-    height: 100%;
-    top: -45%;
-    left: 5%;
-    transform: rotate(10deg);
 }
 
 mark {
     background-color: var(--yellow);
     color: var(--ink);
-    box-sizing: content-box;
-    padding-left: 10px;
 }
-
