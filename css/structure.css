@@ -19,11 +19,25 @@ body main {
     flex-grow: 1;
 }
 
-
 .inner-column {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: var(--spacing);
     border: 2px solid var(--gray);
+}
+
+section [class*="content"] {
+    display: flex;
+    flex-flow: column;
+    gap: calc(var(--spacing) * 3);
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.text-container, .module-left {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 3);
+    align-items: flex-start;
 }

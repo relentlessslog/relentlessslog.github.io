@@ -7,6 +7,8 @@ html {
     --inter: "Inter", sans-serif;
     --spacing: 10px;
     --transition: 0.2s ease-in;
+    --title-width: 335px;
+    --body-width: 623px;
     
     background-color: var(--paper);
 }
@@ -19,5 +21,9 @@ html {
 
     mark {
         background-color: var(--gray)!important;
+    }
+
+    picture img {
+        filter: brightness(85%);
     }
 }

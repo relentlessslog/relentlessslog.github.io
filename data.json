@@ -1,21 +1,34 @@
 {
-    "basicInfo": {
-        "companyName": "Relentless Slog",
-        "email": "relentlessslog@gmail.com",
-        "city": "Seattle, WA"
+    "header": {
+        "id": "header",
+        "text": {
+            "wordmark": "Relentless Slog",
+            "text-link": "say hi"
+        }
     },
     "sections": [
         {
             "id": "landing",
-            "title": "bespoke web solutions for small businesses",
-            "body": "Increase your sales with a meticulously hand-crafted website built by <strike>a nerd</strike> an industry expert — starting at <mark>just $50/month</mark>"
+            "text": {
+                "title": "I make super\r\nawesome websites",
+                "body": "Increase your sales with a lethal web presence meticulously hand-crafted by an industry expert — starting at just $150/month 🤯",
+                "primary-btn": "Get started for free",
+                "secondary-btn": "I don't know"
+            }
         },
         {
             "id": "expertise",
-            "title": "How we poop good results for our clients",
-            "body": "Each line of code is crafted with care and precision, ensuring top-notch performance which in turn attracts more visitors to your website and drives higher revenue to your business."
+            "text": {
+                "title": "How we get super\r\nawesome results",
+                "body": "Mobile-first design, responsiveness, and SEO-driven content are critical for effective web design, driving user engagement, conversions, and organic traffic."
+            }
+        },
+        {
+            "id": "services",
+            "text": {
+                "title": "Everything you\r\nneed (and more)",
+                "body": "There are 2 options: Subscription and lump sum. Prices start at $400."
+            }
         }
-
     ]
 }
-        

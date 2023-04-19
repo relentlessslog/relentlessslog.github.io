@@ -1,21 +1,12 @@
 @import "reset.css";
 @import "setup.css";
 @import "settings.css";
-@import "developer.css";
+/* @import "developer.css"; */
 @import "structure.css";
 @import "typography.css";
 @import "components.css";
 @import "modules.css";
 
-
-.landing-image, .services-image {
-    max-width: 625px;
-}
-
-.item-image {
-    flex-basis: 30%;
-    max-width: 78px;
-}
 
 .portfolio .item-image {
     max-width: 100%;

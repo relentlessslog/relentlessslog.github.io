@@ -24,9 +24,11 @@
 }
 
 .text-link {
+    font-family: var(--inter);
     color: var(--ink);
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    font-size: 1rem;
     text-decoration: underline;
 }

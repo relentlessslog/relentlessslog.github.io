@@ -1,8 +1,2 @@
-@import "header.css";
-
-section [class*="content"] {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 3);
-    align-items: flex-start;
-}
+@import "modules/header.css";
+@import "modules/landing.css";
