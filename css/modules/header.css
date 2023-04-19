@@ -1,5 +1,12 @@
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 5; 
+    background-color: var(--paper);    
+}
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    background-color: var(--paper);    
 }
