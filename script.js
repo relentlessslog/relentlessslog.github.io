@@ -19,7 +19,6 @@ fetch("data.json")
     });
 
 // Setting the width of the horizontal rule based on the computed width of the subtitle
-
 const subTitle = document.querySelectorAll(".subtitle");
 const hr = document.querySelectorAll("hr");
 
@@ -29,10 +28,22 @@ function hrSet(){
     });
 }
 
+// Setting the landing image height based on the text-content height
+const landingImage = document.querySelector(".image__landing");
+const landingText = document.querySelector(".text-container__landing");
+
+function imageHeight(){
+    landingImage.style.height = landingText.clientHeight + "px";
+}
+
+// Make it responsive on load and screen resize
 window.addEventListener("resize", function () {
     hrSet();
+    imageHeight();
 });
 
 window.addEventListener("load", function(){
     hrSet();
+    imageHeight();
 })
+

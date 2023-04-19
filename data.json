@@ -2,18 +2,18 @@
     "header": {
         "id": "header",
         "text": {
-            "wordmark": "Relentless Slog",
-            "text-link": "say hi"
+            "wordmark": "Relentless Sl☻g",
+            "text-link": "say hi →"
         }
     },
     "sections": [
         {
             "id": "landing",
             "text": {
-                "title": "I make super\r\nawesome websites",
-                "body": "Increase your sales with a lethal web presence meticulously hand-crafted by an industry expert — starting at just $150/month 🤯",
-                "primary-btn": "Get started for free",
-                "secondary-btn": "I don't know"
+                "title": "I make super\r\nawesome\u00a0websites",
+                "body": "Increase your sales with a lethal web presence meticulously hand-crafted by an industry expert — starting at just $150/month ☺︎",
+                "primary-btn": "Get started Now",
+                "secondary-btn": "Get free advice"
             }
         },
         {

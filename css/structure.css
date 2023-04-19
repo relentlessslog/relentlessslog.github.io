@@ -21,7 +21,7 @@ body main {
 
 .inner-column {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1275px;
     margin: 0 auto;
     padding: var(--spacing);
     border: 2px solid var(--gray);
@@ -35,7 +35,7 @@ section [class*="content"] {
     justify-content: space-between;
 }
 
-.text-container, .module-left {
+.text-container {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 3);
