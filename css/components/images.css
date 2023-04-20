@@ -17,12 +17,14 @@ html {
     }
     100% {
         transform: translateX(calc(-310px * 9));
+
     }
 }
 
 .slide-view {
     overflow: hidden;
     width: 100%;
+
 }
 
 .slide-track {
@@ -34,4 +36,6 @@ html {
 
 .slide {
     min-width: var(--slide-width);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
