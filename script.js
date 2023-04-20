@@ -28,22 +28,18 @@ function hrSet(){
     });
 }
 
-// Setting the landing image height based on the text-content height
-const landingImage = document.querySelector(".image__landing");
-const landingText = document.querySelector(".text-container__landing");
-
-function imageHeight(){
-    landingImage.style.height = landingText.clientHeight + "px";
-}
-
 // Make it responsive on load and screen resize
 window.addEventListener("resize", function () {
     hrSet();
-    imageHeight();
+    console.log(slideTrack.clientWidth);
 });
 
 window.addEventListener("load", function(){
     hrSet();
-    imageHeight();
 })
 
+// Messing with the slider
+
+const slideTrack = document.querySelector(".slide-track");
+
+console.log(slideTrack.clientWidth);
