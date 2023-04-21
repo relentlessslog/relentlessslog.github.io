@@ -24,7 +24,7 @@ body main {
     max-width: 1275px;
     margin: 0 auto;
     padding: var(--spacing);
-    border: 2px solid var(--gray);
+    border: var(--module-border);
 }
 
 section [class*="content"] {

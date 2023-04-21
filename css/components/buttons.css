@@ -11,7 +11,7 @@
     font-size: clamp(1rem, 0.9259rem + 0.3704vw, 1.25rem);
     padding: 13px 20px;
     text-transform: capitalize;
-    border: 1.5px solid var(--ink);
+    border: var(--button-border);
 }
 
 .primary-btn {

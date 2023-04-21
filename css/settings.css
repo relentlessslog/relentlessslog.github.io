@@ -9,6 +9,8 @@ html {
     --transition: 0.2s ease-in;
     --title-width: 335px;
     --body-width: 623px;
+    --button-border: 1.5px solid var(--ink);
+    --module-border: 2px solid var(--gray);
     
     background-color: var(--paper);
 }

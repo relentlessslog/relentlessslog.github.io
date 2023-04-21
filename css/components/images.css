@@ -4,15 +4,14 @@ html {
 
     /* Slide amount is the amount of images in HTML*/
     --slide-amount: 6;
-    
+
     --slide-gap: 10px;
-    --scroll-speed: 50s;
+    --scroll-speed: 40s;
 
     --full-slide-width: calc(var(--slide-width) + var(--slide-gap));
     --slide-track-width: calc(var(--full-slide-width) * var(--slide-amount));
     --full-slide-negative: calc(var(--full-slide-width) * -1);
     --track-jump: calc(var(--full-slide-negative) * var(--slide-amount));
-
 }
 
 @keyframes scroll {
@@ -21,14 +20,14 @@ html {
     }
     100% {
         transform: translateX(var(--track-jump));
-
     }
 }
 
 .slide-view {
     overflow: hidden;
     width: 100%;
-
+    border-left: var(--module-border);
+    border-right: var(--module-border);
 }
 
 .slide-track {
@@ -43,7 +42,8 @@ html {
     min-width: var(--slide-width);
     height: 286px;
     border-radius: 10px;
-    
+    border: var(--module-border);
+
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
@@ -53,13 +53,13 @@ html {
 }
 
 .slide:hover {
-    filter:brightness(100%);
+    filter: brightness(100%);
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px) {
     html {
         --slide-width: 286px;
-        --slide-gap: 20px;
+        --slide-gap: 30px;
     }
 
     .slide-view {
@@ -67,6 +67,11 @@ html {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        border-left: none;
+        border-right: none;
+        border-top: var(--module-border);
+        border-bottom: var(--module-border);
     }
 
     .slide-track {
@@ -75,10 +80,13 @@ html {
         max-width: 100%;
     }
 
+    .slide {
+        height: 400px;
+    }
+
     @keyframes scroll {
         100% {
             transform: translateY(var(--track-jump));
         }
     }
-
 }
