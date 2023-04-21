@@ -58,7 +58,7 @@ html {
 
 @media only screen and (min-width: 1000px) {
     html {
-        --slide-width: 286px;
+        --slide-width: 350px;
         --slide-gap: 30px;
     }
 
@@ -78,10 +78,11 @@ html {
         flex-direction: column;
         max-width: calc(var(--slide-width));
         max-width: 100%;
+        /* max-height: var(--slide-width); */
     }
 
     .slide {
-        height: 400px;
+        height: var(--slide-width);
     }
 
     @keyframes scroll {
