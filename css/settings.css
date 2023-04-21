@@ -23,7 +23,7 @@ html {
         background-color: var(--gray)!important;
     }
 
-    picture img {
+    picture {
         filter: brightness(85%);
     }
 }

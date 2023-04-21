@@ -3,10 +3,10 @@ html {
     --slide-width: 272px;
 
     /* Slide amount is the amount of images in HTML*/
-    --slide-amount: 9;
+    --slide-amount: 6;
     
     --slide-gap: 10px;
-    --scroll-speed: 30s;
+    --scroll-speed: 50s;
 
     --full-slide-width: calc(var(--slide-width) + var(--slide-gap));
     --slide-track-width: calc(var(--full-slide-width) * var(--slide-amount));
@@ -41,6 +41,44 @@ html {
 
 .slide {
     min-width: var(--slide-width);
+    height: 286px;
+    border-radius: 10px;
+    
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+.slide:hover {
+    filter:brightness(100%);
+}
+
+@media only screen and (min-width: 1000px){
+    html {
+        --slide-width: 286px;
+        --slide-gap: 20px;
+    }
+
+    .slide-view {
+        height: clamp(372px, 34vw, 392px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .slide-track {
+        flex-direction: column;
+        max-width: calc(var(--slide-width));
+        max-width: 100%;
+    }
+
+    @keyframes scroll {
+        100% {
+            transform: translateY(var(--track-jump));
+        }
+    }
+
 }

@@ -31,11 +31,14 @@ function hrSet(){
 // Make it responsive on load and screen resize
 window.addEventListener("resize", function () {
     hrSet();
-    console.log(slideTrack.clientWidth);
 });
 
 window.addEventListener("load", function(){
     hrSet();
 })
 
+
+// Messing with slider
+
+const slides = document.querySelectorAll(".slide");
 
