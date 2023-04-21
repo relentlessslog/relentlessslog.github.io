@@ -1,14 +1,18 @@
 html {
-    --slide-width: 300px;
-    --slide-width--: calc(var(--slide-width) * -1);
+    /* Need to explicit set. Unfortunately it's not responsive. */
+    --slide-width: 272px;
 
+    /* Slide amount is the amount of images in HTML*/
+    --slide-amount: 9;
+    
     --slide-gap: 10px;
-    --slide-gap--: calc(var(--slide-gap) * -1);
-
-    --slide-track-width: 9;
     --scroll-speed: 30s;
 
-    --track-jump: calc((var(--slide-width--) + var(--slide-gap)) * var(--slide-track-width));
+    --full-slide-width: calc(var(--slide-width) + var(--slide-gap));
+    --slide-track-width: calc(var(--full-slide-width) * var(--slide-amount));
+    --full-slide-negative: calc(var(--full-slide-width) * -1);
+    --track-jump: calc(var(--full-slide-negative) * var(--slide-amount));
+
 }
 
 @keyframes scroll {
@@ -16,7 +20,7 @@ html {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-310px * 9));
+        transform: translateX(var(--track-jump));
 
     }
 }
@@ -32,6 +36,7 @@ html {
     align-items: center;
     gap: var(--slide-gap);
     animation: scroll var(--scroll-speed) linear infinite;
+    width: var(--slide-track-width);
 }
 
 .slide {

@@ -38,8 +38,4 @@ window.addEventListener("load", function(){
     hrSet();
 })
 
-// Messing with the slider
 
-const slideTrack = document.querySelector(".slide-track");
-
-console.log(slideTrack.clientWidth);
