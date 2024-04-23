@@ -1,0 +1,37 @@
+<footer class="site-footer">
+    <div class="inner-column footer-content">
+        <div class="contact-info">
+            <a href="/" class="home-btn">
+                <picture>
+                    <img src="{{ contact.logo or placeholders.images.circle }}" alt="">
+                </picture>
+            </a>
+            <address>
+                <p>{{ contact.name }}</p>
+                <p>{{ contact.jobTitle }}</p>
+                {# <p>{{ contact.address.address or placeholders.address.address }}</p>
+                <p>{{ contact.address.city or placeholders.address.city }},
+                    {{ contact.address.state or placeholders.address.state }}
+                    {{ contact.address.zipcode or placeholders.address.zipcode }}</p>
+                <a href="tel:{{ contact.phone or placeholders.button.link }}">{{ contact.phone or placeholders.contactPhone }}</a> #}
+                <a href="mailto:{{ contact.email or placeholders.button.link }}">{{ contact.email or placeholders.contactEmail }}</a>
+            </address>
+        </div>
+
+        <nav class="footer-nav">
+            {% if navigation.footerLinks.length %}
+                {% for item in navigation.footerLinks %}
+                    {% if item.type == "externalLink" %}
+                        <a href="{{ item.link }}" class="nav-link" target="_blank">{{ item.title | capitalize }}</a>
+                    {% else %}
+                        <a href="/{{ item.title | slugify }}" class="nav-link">{{ item.title | capitalize }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <a href="#">link 1</a>
+                <a href="#">link 2</a>
+                <a href="#">link 3</a>
+            {% endif %}
+        </nav>
+    </div>
+</footer>

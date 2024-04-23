@@ -1,0 +1,19 @@
+{
+  "name": "relentlessslog.github.io",
+  "version": "1.0.0",
+  "description": "Web Development & Graphic Design",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "Relentless Slog",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.2"
+  }
+}

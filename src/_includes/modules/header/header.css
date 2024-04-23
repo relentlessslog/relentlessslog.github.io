@@ -1,0 +1,19 @@
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.home-btn {
+    max-width: 100px;
+}
+
+.site-nav .home-btn {
+    align-self: center;
+}

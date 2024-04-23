@@ -1,0 +1,61 @@
+{
+  "headerLinks": [
+    {
+      "type": "linksFromPages",
+      "title": "About"
+    },
+    {
+      "type": "linksFromProjects",
+      "title": "projects"
+    },
+    {
+      "type": "linksFromBlog",
+      "title": "blog"
+    },
+    {
+      "type": "linksFromPages",
+      "title": "Contact"
+    }
+  ],
+  "footerLinks": [
+    {
+      "type": "linksFromProjects",
+      "title": "projects"
+    },
+    {
+      "type": "linksFromExercises",
+      "title": "exercises"
+    },
+    {
+      "type": "linksFromBlog",
+      "title": "blog"
+    },
+    {
+      "type": "linksFromPages",
+      "title": "About"
+    },
+    {
+      "type": "linksFromPages",
+      "title": "FAQ"
+    },
+    {
+      "type": "linksFromPages",
+      "title": "Contact"
+    },
+    {
+      "type": "externalLink",
+      "title": "CodePen",
+      "link": "https://codepen.io/relentlessslog"
+    },
+    {
+      "type": "externalLink",
+      "title": "GitHub",
+      "link": "github.com/relentlessslog"
+    },
+    {
+      "type": "externalLink",
+      "title": "Instagram",
+      "link": "https://instagram.com/relentlessslog"
+    }
+  ]
+}

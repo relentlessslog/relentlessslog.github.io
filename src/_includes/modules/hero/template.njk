@@ -1,0 +1,15 @@
+<section class="hero">
+
+    <div class="inner-column hero-content">
+        <div class="text-content">
+            {# <h2>{{ section.heading or placeholders.heading }}</h2> #}
+            <p>{{ section.paragraph | markdownify | safe if section.paragraph else placeholders.paragraph }}</p>
+            <a href="{{ section.button.link | lower or placeholders.button.text }}" class="hero-btn">
+                <span>{{ section.button.text or placeholders.button.text }}
+                    →</span></a>
+        </div>
+        <picture class="hero-image">
+            <img src="{{ section.image or placeholders.images.square }}" alt="">
+        </picture>
+    </div>
+</section>

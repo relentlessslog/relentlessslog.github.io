@@ -1,0 +1,60 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    cursor:default;
+}
+
+body *::selection {
+    background-color: var(--ink);
+    color: var(--paper);
+}
+
+picture {
+    display: block;
+    overflow: hidden;
+}
+
+:is(picture, p) img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+:is(a, button, address) span {
+    display: block;
+}
+
+p a {
+    display: inline;
+    color: var(--ink);
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}

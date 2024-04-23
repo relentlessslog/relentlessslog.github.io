@@ -1,0 +1,7 @@
+h1, h2, h3, h4, h5, h6, p, a, li, span {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-4);
+    font-size: var(--font-size-1);
+    letter-spacing: var(--font-letterspacing-1);
+    line-height: var(--font-lineheight-5);
+}

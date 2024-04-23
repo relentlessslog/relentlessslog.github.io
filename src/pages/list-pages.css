@@ -1,0 +1,20 @@
+.list-page-content ul {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 5px;
+    justify-content: center;
+    /* justify-content: center; */
+}
+
+.list-page-content ul li {
+    /* width: 100%; */
+    /* max-width: 350px; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.list-page-content li h3 {
+    flex-grow: 1;
+}
+

@@ -1,0 +1,221 @@
+backend:
+    name: git-gateway
+    branch: main
+local_backend: true
+media_folder: "public/images"
+public_folder: "/images"
+search: false
+publish_mode: editorial_workflow
+editor:
+    preview: false
+collections:
+    - label: "Pages"
+      name: "pages"
+      label_singular: "page"
+      folder: "src/pages"
+      extension: "njk"
+      format: "frontmatter"
+      slug: "{{slug}}"
+      preview_path: "/{{slug}}"
+      create: true
+      fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Metadata"
+            name: "metadata"
+            widget: "object"
+            collapsed: true
+            fields:
+                - { label: "Title", name: "metaTitle", widget: "string", required: false }
+                - { label: "Description", name: "description", widget: "string", required: false }
+                - { label: "Image", name: "image", widget: "image", required: false }
+                - { label: "Favicon", name: "favicon", widget: "string", required: false }
+          - label: "Sections"
+            name: "sections"
+            label_singular: "section"
+            widget: "list"
+            collapsed: true
+            types:
+                - label: "Hero Section"
+                  name: "hero"
+                  widget: "object"
+                  fields:
+                      # - { label: "Heading", name: "heading", widget: "string" }
+                      - { label: "Paragraph", name: "paragraph", widget: "markdown", buttons: ["link", "bold"], editor_components: [], modes: ["rich_text"], required: false }
+                      - label: "Button"
+                        name: "button"
+                        widget: "object"
+                        fields:
+                            - { label: "text", name: "text", widget: "string", required: false }
+                            - { label: "link", name: "link", widget: "relation", collection: "pages", search_fields: ["title"], value_field: "title", required: false }
+                      - { label: "Image", name: "image", widget: "image", required: false }
+                      - { label: "Module Type", name: "module", widget: "hidden", default: "hero" }
+                - label: "List"
+                  name: "list"
+                  widget: "object"
+                  fields:
+                      - { label: "Section Title", name: "title", widget: "string", required: false }
+                      - { label: "Collection", name: "tagName", widget: "select", options: ["post-type-1", "post-type-2"] }
+                      - { label: "How many items to list?", name: "number", widget: "number", min: 1, required: false, default: 3 }
+                      - { label: "Module Type", name: "module", widget: "hidden", default: "list" }
+    - label: "Projects"
+      name: "projects"
+      label_singular: "project"
+      folder: "src/projects"
+      slug: "{{slug}}"
+      preview_path: "projects/{{slug}}"
+      create: true
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Favicon", name: "favicon", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - { label: "Tags", name: "tags", widget: "list", default: ["projects"] }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "projects/{{ title | slugify }}/index.html" }
+    - label: "Exercises"
+      name: "exercises"
+      label_singular: "exercise"
+      folder: "src/exercises"
+      slug: "{{slug}}"
+      preview_path: "exercises/{{slug}}"
+      create: true
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Favicon", name: "favicon", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - { label: "Tags", name: "tags", widget: "list", default: ["exercises"] }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "exercises/{{ title | slugify }}/index.html" }
+    - label: "Blog"
+      name: "blog"
+      label_singular: "blog"
+      folder: "src/blog"
+      slug: "{{slug}}"
+      preview_path: "blog/{{slug}}"
+      create: true
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Favicon", name: "favicon", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - { label: "Tags", name: "tags", widget: "list", default: ["blog"] }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "blog/{{ title | slugify }}/index.html" }
+    - label: "Settings"
+      name: "settings"
+      files:
+          - label: "Contact Information"
+            name: "contact"
+            file: "src/_data/contact.json"
+            fields:
+                - { label: "Name", name: "name", widget: "string", required: false }
+                - { label: "Job Title", name: "jobTitle", widget: "string", required: false }
+                - { label: "Phone", name: "phone", widget: "string", required: false }
+                - { label: "Email", name: "email", widget: "string", required: false }
+                - label: "Address"
+                  name: "address"
+                  widget: "object"
+                  required: false
+                  collapsed: true
+                  fields:
+                      - { label: "Address", name: "address", widget: "string", required: false }
+                      - { label: "City", name: "city", widget: "string", required: false }
+                      - { label: "State", name: "state", widget: "string", required: false }
+                      - { label: "Zipcode", name: "zipcode", widget: "string", required: false }
+                - { label: "Logo", name: "logo", widget: "image", required: false }
+          - label: "Metadata"
+            name: "data"
+            file: "src/_data/data.json"
+            fields:
+                - { label: "Title", name: "metaTitle", widget: "string", required: false }
+                - { label: "Description", name: "description", widget: "string", required: false }
+                - { label: "Image", name: "image", widget: "image", required: false }
+                - { label: "URL", name: "url", widget: "string", required: false }
+                - { label: "Favicon", name: "favicon", widget: "string", required: false }
+    - label: "Navigation"
+      name: "nav"
+      files:
+          - label: "Header"
+            name: "header"
+            file: "src/_data/navigation.json"
+            fields:
+                - label: "Links in header"
+                  name: "headerLinks"
+                  label_singular: "Link in header"
+                  widget: "list"
+                  collapsed: true
+                  types:
+                      - label: "Link to Pages"
+                        name: "linksFromPages"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        fields:
+                            - { label: "Page", name: "title", widget: "relation", collection: "pages", search_fields: ["title"], value_field: "title" }
+                      - label: "Link to All Projects"
+                        name: "linksFromProjects"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        collapsed: true
+                        fields:
+                            - { label: "Projects", name: "title", widget: "hidden", default: "projects" }
+                      - label: "Link to All Exercises"
+                        name: "linksFromExercises"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        collapsed: true
+                        fields:
+                            - { label: "Projects", name: "title", widget: "hidden", default: "exercises" }
+                      - label: "Link to All Blogs"
+                        name: "linksFromBlog"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        collapsed: true
+                        fields:
+                            - { label: "Projects", name: "title", widget: "hidden", default: "blog" }
+                - label: "Links in footer"
+                  name: "footerLinks"
+                  label_singular: "Link in footer"
+                  widget: "list"
+                  collapsed: true
+                  types:
+                      - label: "Link to Pages"
+                        name: "linksFromPages"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        fields:
+                            - { label: "Page", name: "title", widget: "relation", collection: "pages", search_fields: ["title"], value_field: "title" }
+                      - label: "Link to All Projects"
+                        name: "linksFromProjects"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        collapsed: true
+                        fields:
+                            - { label: "Projects", name: "title", widget: "hidden", default: "projects" }
+                      - label: "Link to All Exercises"
+                        name: "linksFromExercises"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        collapsed: true
+                        fields:
+                            - { label: "Projects", name: "title", widget: "hidden", default: "exercises" }
+                      - label: "Link to All Blogs"
+                        name: "linksFromBlog"
+                        widget: "object"
+                        summary: "{{fields.title}}"
+                        collapsed: true
+                        fields:
+                            - { label: "Projects", name: "title", widget: "hidden", default: "blog" }
+                      - label: "Link to External Page"
+                        name: "externalLink"
+                        widget: "object"
+                        collapsed: true
+                        summary: "{{fields.title}}"
+                        fields:
+                          - { label: "Title", name: "title", widget: "string" }
+                          - { label: "Link", name: "link", widget: "string" }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ metadata.metaTitle if metadata.metaTitle.length else data.metaTitle }}</title>
+        <meta property="og:title" content="{{ metadata.metaTitle if metadata.metaTitle.length else data.metaTitle }}"/>
+
+        <meta name="description" content="{{ description if description.length else data.description }}">
+        <meta property="og:description" content="{{ description if description.length else data.description }}"/>
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{ url }}"/>
+        <meta property="og:image" content="{{ image if image.length else data.image }}"/>
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ metadata.favicon if metadata.favicon.length else data.favicon }}</text></svg>">
+
+        <link rel="stylesheet" href="/css/style.css">
+
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        {% include "modules/header/template.njk" %}
+        <code class="inner-column" style="font-family: monospace; background-color: cyan">{{ page.url }}</code>
+        <main class="site-main">
+            {% for section in sections %}
+            {% include "modules/" + section.module + "/template.njk" %}
+            {% endfor %}
+            {{ content | safe }} 
+        </main>
+
+        {% include "modules/footer/template.njk" %}
+
+        <script src="/script.js"></script>
+    </body>
+</html>  
