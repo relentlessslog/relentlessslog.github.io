@@ -5252,3 +5252,32 @@ body.search-is-visible {
         padding-top: var(--vspace-1);
     }
 }
+
+.entry__thumb {
+    border: 1px solid black;
+}
+
+.lines span {
+    background-color: black !important;
+}
+
+.bricks-wrapper .brick {
+    border-top: 1px solid black;
+}
+
+.s-content__post-thumb {
+    border: 1px solid black;
+}
+
+.s-content__post-thumb .video-container {
+    border: 1px solid black;
+}
+
+.s-content__media:not(.video-container) {
+    border: none;
+}
+
+.s-content__post-thumb:has(.video-container) {
+    border: none;
+}
+
