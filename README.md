@@ -10,7 +10,7 @@
 - [x] Favicons
 - [x] Meta Images
 - [ ] Links and Navigation
-- [ ] Device mockup Images
+- [x] Device mockup Images
 
 
 ## Organize Website Categories
@@ -19,25 +19,34 @@
 
 Add Shopify templates
 
+### Ecommerce
+
+* Craft x
+* Crave x 
+* Origin x
+* Publisher x
+* Spotlight x
+* Studio x
+* Taste x
+* Montgomery Street x
+
 ### Business
 
-* CPG Market Makers
-* Artemis Group
+* CPG Market Makers x
+* Artemis Group x
 * Grandes Gardening
-* Forty
-* Infinity
+* Cuatro x
+* Infinity x
+* Dimension x
 * Codestitch starter
 
 ### Editorial
 
-* Abstract
-* Calvin
-* Editorial
-* Escape Velocity
-* Future Imperfect
-* Keep it simple
-* Massively
+* Auto-Focus x
+* Crescent x
+* Extra Extra x
+* Velocity x
+* Quicksand Press x
+* Simplistic x
+* Digital Valley x
   
-## Portfolio
-
-* Dimension
